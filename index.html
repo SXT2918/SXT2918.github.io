@@ -25,7 +25,7 @@
   --font-body:'Manrope',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;font-size:clamp(15px,.35vw + 10.5px,20px)}
 body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7;overflow-x:hidden;font-weight:400}
 ::selection{background:var(--accent);color:var(--bg)}
 .micro{font-family:var(--font-body);font-weight:600;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase}
@@ -71,7 +71,7 @@ nav.scrolled{background:rgba(18,17,16,.92);backdrop-filter:blur(8px);border-bott
 .hero-media video{width:100%;height:100%;object-fit:cover;object-position:center 38%}
 @media(max-width:900px){.hero-media{left:0}}
 .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(18,17,16,.92) 6%,rgba(18,17,16,.5) 40%,rgba(18,17,16,0) 60%),linear-gradient(rgba(18,17,16,.35),rgba(18,17,16,0) 35%,rgba(18,17,16,.65) 86%,var(--bg) 100%)}
-.hero-inner{position:relative;z-index:2;width:100%;max-width:1440px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3.4rem) clamp(3rem,8vh,6rem);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:2rem;align-items:end}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:min(1900px,max(1440px,86vw));margin:0 auto;padding:0 clamp(1.2rem,4vw,3.4rem) clamp(3rem,8vh,6rem);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:2rem;align-items:end}
 .hero-eyebrow{color:var(--accent);margin-bottom:1.4rem}
 .hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(2.7rem,6.4vw,5.4rem);line-height:1.08;letter-spacing:.005em;margin-bottom:1rem}
 .hero h1 .alt{display:block;font-size:.62em;color:var(--accent);line-height:1.15;padding-bottom:.08em}
@@ -96,7 +96,7 @@ nav.scrolled{background:rgba(18,17,16,.92);backdrop-filter:blur(8px);border-bott
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-chips{flex-direction:row;border-top:none}.chip{flex:1 1 120px;border-bottom:none}}
 
 /* ---------- sections ---------- */
-section{max-width:1440px;margin:0 auto;padding:clamp(4.5rem,12vh,8rem) clamp(1.2rem,4vw,3.4rem)}
+section{max-width:min(1900px,max(1440px,86vw));margin:0 auto;padding:clamp(4.5rem,12vh,8rem) clamp(1.2rem,4vw,3.4rem)}
 .sec-head{font-family:var(--font-display);font-weight:400;font-size:clamp(1.8rem,3.6vw,2.9rem);letter-spacing:.01em;margin-bottom:1rem}
 .sec-head i{color:var(--accent)}
 .sec-sub{color:var(--text-2);max-width:58ch;margin-bottom:3rem;font-size:.95rem}
@@ -221,7 +221,7 @@ a.link:hover::after{opacity:1}
 .contact-media{position:absolute;inset:0;z-index:0}
 .contact-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
 .contact-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(var(--bg) 0%,rgba(18,17,16,.72) 30%,rgba(18,17,16,.62) 70%,var(--bg) 100%)}
-.contact-inner{position:relative;z-index:2;max-width:1440px;margin:0 auto;padding:clamp(6rem,16vh,10rem) clamp(1.2rem,4vw,3.4rem);text-align:center}
+.contact-inner{position:relative;z-index:2;max-width:min(1900px,max(1440px,86vw));margin:0 auto;padding:clamp(6rem,16vh,10rem) clamp(1.2rem,4vw,3.4rem);text-align:center}
 .contact-inner .micro{color:var(--accent)}
 .contact-inner h2{font-family:var(--font-display);font-weight:400;font-size:clamp(2.2rem,5vw,4rem);margin:1.2rem 0 1rem;line-height:1.15}
 .contact-inner h2 i{color:var(--accent)}
@@ -234,7 +234,7 @@ a.link:hover::after{opacity:1}
 .contact-links a.link:hover::after{background:var(--accent)}
 
 /* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;max-width:1440px;margin:0 auto;padding:2rem clamp(1.2rem,4vw,3.4rem)}
+footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;max-width:min(1900px,max(1440px,86vw));margin:0 auto;padding:2rem clamp(1.2rem,4vw,3.4rem)}
 footer .fname{font-family:var(--font-display);font-size:1rem;color:var(--text-2)}
 footer .fname b{color:var(--accent);font-weight:400}
 footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
@@ -339,12 +339,13 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
     </div>
     <div>
       <div class="proj-shot switcher">
-        <img id="fraudopsShot" src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-fraud-pattern-analysis.png" alt="FraudOps fraud pattern analysis charts" loading="lazy" onerror="this.closest('.proj-shot').classList.add('hidden')">
+        <img id="fraudopsShot" src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-fraud-pattern-analysis.png?v=2" alt="FraudOps fraud pattern analysis charts" loading="lazy" onerror="this.closest('.proj-shot').classList.add('hidden')">
       </div>
       <div class="shot-tabs" role="tablist" aria-label="FraudOps screenshots">
-        <button class="shot-tab active" data-src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-fraud-pattern-analysis.png" data-alt="FraudOps fraud pattern analysis charts">Fraud Patterns</button>
-        <button class="shot-tab" data-src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-model-performance.png" data-alt="FraudOps model performance metrics and confusion matrix">Model Performance</button>
-        <button class="shot-tab" data-src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-risk-monitoring.png" data-alt="FraudOps scored transaction review queue">Risk Queue</button>
+        <button class="shot-tab active" data-src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-fraud-pattern-analysis.png?v=2" data-alt="FraudOps fraud pattern analysis charts">Fraud Patterns</button>
+        <button class="shot-tab" data-src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-sql-insights.png?v=2" data-alt="FraudOps SQL insights with fraud KPI summary">SQL Insights</button>
+        <button class="shot-tab" data-src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-model-performance.png?v=2" data-alt="FraudOps model performance metrics and confusion matrix">Model Performance</button>
+        <button class="shot-tab" data-src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-risk-monitoring.png?v=2" data-alt="FraudOps scored transaction review queue">Risk Queue</button>
       </div>
     </div>
   </div>
