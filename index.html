@@ -203,6 +203,10 @@ a.link:hover::after{opacity:1}
 .shot .ph{display:none}
 .shot.empty img{display:none}
 .shot.empty .ph{display:flex;position:absolute;inset:0;align-items:center;justify-content:center;color:var(--text-3);font-size:.74rem;letter-spacing:.1em}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1rem .9rem;background:linear-gradient(transparent,rgba(18,17,16,.85));color:var(--text);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:0;transition:opacity .4s}
+.shot:hover .cap{opacity:1}
+.shot.empty .cap{display:none}
+@media(pointer:coarse){.shot .cap{opacity:1}}
 .gallery-hint{font-size:.74rem;color:var(--text-3);letter-spacing:.08em;margin-top:.4rem}
 
 /* ---------- project screenshots ---------- */
@@ -476,12 +480,14 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
   </div>
   <div class="gallery-wrap reveal">
     <div class="gallery" id="gallery" tabindex="0" aria-label="Photo gallery, drag or scroll horizontally">
-      <figure class="shot"><img src="photos/p1.jpg" alt="Photography by Cindy" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p1.jpg</figcaption></figure>
-      <figure class="shot tall"><img src="photos/p2.jpg" alt="Photography by Cindy" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p2.jpg</figcaption></figure>
-      <figure class="shot"><img src="photos/p3.jpg" alt="Photography by Cindy" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p3.jpg</figcaption></figure>
-      <figure class="shot tall"><img src="photos/p4.jpg" alt="Photography by Cindy" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p4.jpg</figcaption></figure>
-      <figure class="shot"><img src="photos/p5.jpg" alt="Photography by Cindy" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p5.jpg</figcaption></figure>
-      <figure class="shot tall"><img src="photos/p6.jpg" alt="Photography by Cindy" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p6.jpg</figcaption></figure>
+      <figure class="shot tall"><img src="photos/p1.jpg" alt="Cindy singing on stage" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p1.jpg</figcaption><figcaption class="cap">On stage · Chinese Music Club</figcaption></figure>
+      <figure class="shot"><img src="photos/p3.jpg" alt="Event space during setup" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p3.jpg</figcaption><figcaption class="cap">Event day, behind the scenes</figcaption></figure>
+      <figure class="shot tall"><img src="photos/p2.jpg" alt="Making holiday cards at a volunteering workshop" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p2.jpg</figcaption><figcaption class="cap">Holiday card workshop</figcaption></figure>
+      <figure class="shot"><img src="photos/p4.jpg" alt="Camera collection, from point-and-shoot to DSLR" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p4.jpg</figcaption><figcaption class="cap">The camera shelf</figcaption></figure>
+      <figure class="shot tall"><img src="photos/p5.jpg" alt="Mont-Tremblant village at night" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p5.jpg</figcaption><figcaption class="cap">Mont-Tremblant, after dark</figcaption></figure>
+      <figure class="shot"><img src="photos/p8.jpg" alt="Portrait of a cream cat, shot by Cindy" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p8.jpg</figcaption><figcaption class="cap">Shot on my own camera</figcaption></figure>
+      <figure class="shot tall"><img src="photos/p6.jpg" alt="Dune buggy in the Dominican Republic" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p6.jpg</figcaption><figcaption class="cap">Off-road, Dominican Republic</figcaption></figure>
+      <figure class="shot tall"><img src="photos/p7.jpg" alt="Cindy with her ragdoll cat" loading="lazy" onerror="this.parentElement.classList.add('empty')"><figcaption class="ph">photos/p7.jpg</figcaption><figcaption class="cap">Chief distraction officer</figcaption></figure>
     </div>
     <p class="gallery-hint">Drag sideways, or scroll inside the strip</p>
   </div>
