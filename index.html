@@ -181,7 +181,7 @@ a.link:hover::after{opacity:1}
 .skill{margin-bottom:1.15rem}
 .skill .row{display:flex;justify-content:space-between;align-items:baseline;font-size:.88rem;margin-bottom:.45rem;gap:.8rem}
 .skill .row em{font-style:normal;color:var(--text-3);font-size:.74rem;letter-spacing:.06em;text-align:right}
-.bar{height:1px;background:var(--line);overflow:hidden}
+.bar{display:none}
 .bar i{display:block;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left}
 @media(max-width:860px){.skills-wrap{grid-template-columns:1fr}.skill-col{border-right:none;border-bottom:1px solid var(--line)}.skill-col:last-child{border-bottom:none}}
 
@@ -295,7 +295,7 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
     <div class="hero-chips">
       <div class="chip"><span class="num" data-count="284807">0</span><span class="lbl">transactions analyzed for fraud signals</span></div>
       <div class="chip"><span class="num" data-count="95" data-suffix="%">0</span><span class="lbl">precision at the chosen fraud threshold</span></div>
-      <div class="chip"><span class="num" data-count="131">0</span><span class="lbl">automated tests across two platforms</span></div>
+      <div class="chip"><span class="num" data-count="3">0</span><span class="lbl">flagship analytics and engineering projects</span></div>
     </div>
   </div>
 </header>
@@ -305,7 +305,7 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
     <div class="about-copy">
       <h2 class="sec-head reveal">Data person, builder, <i>storyteller.</i></h2>
       <p class="reveal">Second-year <b>Statistics and Mathematics</b> student at the University of Toronto, working toward data analyst, data science, and ML engineering roles.</p>
-      <p class="reveal">Recent contributions: a fraud platform that scored <b>284,807 transactions</b>, a portfolio data engine that cut manual reconciliation by <b>90%+</b>, and statistical analyses that shaped planning for a nonprofit's <b>3,500+ members</b>.</p>
+      <p class="reveal">Recent work includes an operational fraud-monitoring prototype, an analysis of <b>284,807 anonymized transactions</b>, a portfolio data engine that automates reconciliation steps, and statistical analyses supporting planning for a nonprofit's <b>3,500+ members</b>.</p>
       <div class="edu reveal">
         <h3>B.Sc. Statistics &amp; Mathematics</h3>
         <span class="gpa">3.5+</span>
@@ -362,12 +362,12 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
     </div>
     <div>
       <h3>Credit Card Fraud Detection</h3>
-      <p class="desc">Analyzed <b>284,807 transactions</b> to surface actionable fraud signals: late-night spikes, sub-$1 test charges, and high-risk merchant patterns. Selected a cost-sensitive threshold reaching <b>95% precision</b>, then translated it all into a Tableau dashboard for stakeholders.</p>
+      <p class="desc">Analyzed <b>284,807 anonymized transactions</b> to explore fraud signals, including elapsed-time and sub-$1 patterns. Selected a threshold reaching <b>95% precision on the held-out sample</b>, then translated the results and limitations into a Tableau dashboard.</p>
       <div class="tags">
         <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">XGBoost</span><span class="tag">Tableau</span>
       </div>
       <div class="proj-metrics" style="margin-bottom:1.6rem">
-        <div class="metric"><span class="num">$9,532</span><span class="lbl">estimated prevented loss per period</span></div>
+        <div class="metric"><span class="num">$9,532</span><span class="lbl">detected transaction-value exposure in the test sample</span></div>
         <div class="metric"><span class="num">78/98</span><span class="lbl">fraud cases caught, 4 false alarms</span></div>
         <div class="metric"><span class="num">0.17%</span><span class="lbl">class imbalance handled</span></div>
         <div class="metric"><span class="num">3</span><span class="lbl">models benchmarked on PR-AUC</span></div>
@@ -379,15 +379,15 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
   <div class="proj reveal">
     <div>
       <h3>FinanceThat</h3>
-      <p class="desc">Built a portfolio data platform integrating <b>Interactive Brokers Flex</b> workflows into a normalized 10-table SQLite schema, with a Canadian ACB engine for realized and unrealized P&amp;L, dividends, and proceeds simulation. Cut manual reconciliation by <b>90%+</b>.</p>
+      <p class="desc">Built a portfolio data platform integrating <b>Interactive Brokers Flex</b> workflows into a normalized 10-table SQLite schema, with a Canadian ACB engine for realized and unrealized P&amp;L, dividends, and proceeds simulation. It automates repeated reconciliation calculations while keeping assumptions inspectable.</p>
       <div class="tags">
         <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">REST API</span><span class="tag">Streamlit</span>
       </div>
       <div class="proj-metrics" style="margin-bottom:1.6rem">
         <div class="metric"><span class="num">3,600+</span><span class="lbl">lines of production Python</span></div>
-        <div class="metric"><span class="num">99</span><span class="lbl">pytest cases</span></div>
+        <div class="metric"><span class="num">CI</span><span class="lbl">Python tests, linting, and TypeScript checks</span></div>
         <div class="metric"><span class="num">10</span><span class="lbl">normalized SQLite tables</span></div>
-        <div class="metric"><span class="num">90%+</span><span class="lbl">manual reconciliation cut</span></div>
+        <div class="metric"><span class="num">5</span><span class="lbl">IBKR Flex data feeds integrated</span></div>
       </div>
       <a class="link" href="https://github.com/SXT2918/FinanceThat" target="_blank" rel="noopener">View on GitHub</a>
     </div>
@@ -446,25 +446,25 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
 
 <section id="skills">
   <h2 class="sec-head reveal">Skills, <i>in practice</i></h2>
-  <p class="sec-sub reveal">Every bar is backed by a project or a course, not a self-rating.</p>
+  <p class="sec-sub reveal">Each skill is tied to project or coursework evidence rather than a numerical self-rating.</p>
   <div class="skills-wrap reveal">
     <div class="skill-col">
       <h3 class="micro">Languages</h3>
-      <div class="skill"><div class="row"><span>Python</span><em>daily driver</em></div><div class="bar"><i data-w=".92"></i></div></div>
-      <div class="skill"><div class="row"><span>SQL</span><em>fluent</em></div><div class="bar"><i data-w=".85"></i></div></div>
+      <div class="skill"><div class="row"><span>Python</span><em>FraudOps + FinanceThat</em></div><div class="bar"><i data-w=".92"></i></div></div>
+      <div class="skill"><div class="row"><span>SQL</span><em>fraud analytics layers</em></div><div class="bar"><i data-w=".85"></i></div></div>
       <div class="skill"><div class="row"><span>R</span><em>coursework + projects</em></div><div class="bar"><i data-w=".72"></i></div></div>
     </div>
     <div class="skill-col">
       <h3 class="micro">ML &amp; Analytics</h3>
       <div class="skill"><div class="row"><span>scikit-learn / XGBoost</span><em>4 projects</em></div><div class="bar"><i data-w=".88"></i></div></div>
-      <div class="skill"><div class="row"><span>EDA &amp; statistics</span><em>core strength</em></div><div class="bar"><i data-w=".9"></i></div></div>
+      <div class="skill"><div class="row"><span>EDA &amp; statistics</span><em>coursework + case studies</em></div><div class="bar"><i data-w=".9"></i></div></div>
       <div class="skill"><div class="row"><span>Thresholds &amp; imbalance</span><em>fraud work</em></div><div class="bar"><i data-w=".82"></i></div></div>
     </div>
     <div class="skill-col">
       <h3 class="micro">Data Eng &amp; BI</h3>
       <div class="skill"><div class="row"><span>FastAPI / ETL / SQLite</span><em>2 platforms</em></div><div class="bar"><i data-w=".8"></i></div></div>
       <div class="skill"><div class="row"><span>Tableau / Power BI</span><em>dashboards</em></div><div class="bar"><i data-w=".78"></i></div></div>
-      <div class="skill"><div class="row"><span>pytest / Git</span><em>125 tests written</em></div><div class="bar"><i data-w=".76"></i></div></div>
+      <div class="skill"><div class="row"><span>pytest / Git</span><em>CI-backed project suites</em></div><div class="bar"><i data-w=".76"></i></div></div>
     </div>
   </div>
 </section>
@@ -505,7 +505,7 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
 
 <section id="contact">
   <div class="contact-media">
-    <img src="contact.jpg" alt="" onerror="this.style.display='none'">
+    <img src="hero-poster.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
   </div>
   <div class="contact-scrim"></div>
   <div class="contact-inner">
