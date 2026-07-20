@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Xintian (Cindy) Shi · Data Analyst &amp; ML Engineer</title>
-<meta name="description" content="Portfolio of Xintian (Cindy) Shi, Statistics and Mathematics student at the University of Toronto. Fraud analytics, ML pipelines, and data platforms.">
+<title>Xintian (Cindy) Shi · AI Product Builder &amp; Data Scientist</title>
+<meta name="description" content="Portfolio of Xintian (Cindy) Shi, a University of Toronto Statistics and Mathematics student building AI evaluation, security, accessibility, and machine-learning products.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -137,6 +137,7 @@ section{max-width:min(1900px,max(1440px,86vw));margin:0 auto;padding:clamp(4.5re
 a.link{font-weight:600;font-size:.72rem;color:var(--accent);text-decoration:none;letter-spacing:.24em;text-transform:uppercase;position:relative}
 a.link::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:100%;background:var(--accent);opacity:.45;transition:opacity .3s}
 a.link:hover::after{opacity:1}
+.proj-links{display:flex;flex-wrap:wrap;gap:.75rem 1.6rem;align-items:center}
 .proj-flip{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
 @media(max-width:860px){.proj-flip>div:first-child{order:2}}
 .proj-pair{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:1.4rem;margin-bottom:1.4rem}
@@ -181,7 +182,7 @@ a.link:hover::after{opacity:1}
 .skill{margin-bottom:1.15rem}
 .skill .row{display:flex;justify-content:space-between;align-items:baseline;font-size:.88rem;margin-bottom:.45rem;gap:.8rem}
 .skill .row em{font-style:normal;color:var(--text-3);font-size:.74rem;letter-spacing:.06em;text-align:right}
-.bar{height:1px;background:var(--line);overflow:hidden}
+.bar{display:none}
 .bar i{display:block;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left}
 @media(max-width:860px){.skills-wrap{grid-template-columns:1fr}.skill-col{border-right:none;border-bottom:1px solid var(--line)}.skill-col:last-child{border-bottom:none}}
 
@@ -259,7 +260,7 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
 
 <div id="loader" aria-hidden="true">
   <div class="loader-name">Xintian Shi <span class="paren">Cindy</span></div>
-  <div class="loader-titles micro"><span>Data Analyst<br>Data Scientist<br>ML Engineer</span></div>
+  <div class="loader-titles micro"><span>AI Product Builder<br>Data Scientist<br>ML Engineer</span></div>
   <div class="loader-track"><i id="ltrack"></i></div>
   <div class="loader-pct"><span id="lpct">0</span> %</div>
 </div>
@@ -286,16 +287,16 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
     <div>
       <p class="hero-eyebrow micro">Statistics &amp; Mathematics · University of Toronto</p>
       <h1>Xintian Shi<span class="alt"><i>Cindy</i></span></h1>
-      <p class="hero-role"><span id="role">Data Analyst</span></p>
+      <p class="hero-role"><span id="role">AI Product Builder</span></p>
       <div class="hero-cta">
         <a class="btn btn-primary magnetic" href="#projects"><span>View Projects</span></a>
         <a class="btn btn-ghost magnetic" href="#contact"><span>Contact</span></a>
       </div>
     </div>
     <div class="hero-chips">
-      <div class="chip"><span class="num" data-count="284807">0</span><span class="lbl">transactions analyzed for fraud signals</span></div>
-      <div class="chip"><span class="num" data-count="95" data-suffix="%">0</span><span class="lbl">precision at the chosen fraud threshold</span></div>
-      <div class="chip"><span class="num" data-count="131">0</span><span class="lbl">automated tests across two platforms</span></div>
+      <div class="chip"><span class="num" data-count="25">0</span><span class="lbl">repeatable checks in the AI evaluation suite</span></div>
+      <div class="chip"><span class="num" data-count="3">0</span><span class="lbl">AI products spanning quality, security, and access</span></div>
+      <div class="chip"><span class="num" data-count="5">0</span><span class="lbl">human access perspectives reviewed</span></div>
     </div>
   </div>
 </header>
@@ -303,9 +304,9 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
 <section id="about">
   <div class="about-grid">
     <div class="about-copy">
-      <h2 class="sec-head reveal">Data person, builder, <i>storyteller.</i></h2>
-      <p class="reveal">Second-year <b>Statistics and Mathematics</b> student at the University of Toronto, working toward data analyst, data science, and ML engineering roles.</p>
-      <p class="reveal">Recent contributions: a fraud platform that scored <b>284,807 transactions</b>, a portfolio data engine that cut manual reconciliation by <b>90%+</b>, and statistical analyses that shaped planning for a nonprofit's <b>3,500+ members</b>.</p>
+      <h2 class="sec-head reveal">AI builder, data person, <i>storyteller.</i></h2>
+      <p class="reveal">Second-year <b>Statistics and Mathematics</b> student at the University of Toronto, building practical AI products alongside data-science and machine-learning systems.</p>
+      <p class="reveal">Recent work includes a live AI model release check, a context-security scanner, a public-information accessibility reviewer, an operational fraud-monitoring platform, and research on the economics and governance of AI token use.</p>
       <div class="edu reveal">
         <h3>B.Sc. Statistics &amp; Mathematics</h3>
         <span class="gpa">3.5+</span>
@@ -323,24 +324,78 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
 
 <section id="projects">
   <h2 class="sec-head reveal">Selected <i>work</i></h2>
-  <p class="sec-sub reveal">Four projects, each leading with what I built and what it changed.</p>
+  <p class="sec-sub reveal">AI product work comes first, followed by deeper machine-learning, data-platform, and statistical projects. Each project is ordered by current role relevance, product completeness, and presentation quality.</p>
 
   <div class="proj reveal" id="tiltCard">
     <div>
-      <span class="kicker micro">Flagship · 2026</span>
-      <h3>FraudOps: Risk Monitoring Platform</h3>
-      <p class="desc">Engineered an end-to-end fraud review workflow: CSV ingestion, schema validation, model training, probability scoring, and <b>Low/Medium/High routing</b>, served through a FastAPI scoring service and a five-tab Streamlit dashboard. Converted model scores into business metrics such as review volume, threshold tradeoffs, and <b>estimated prevented loss</b>.</p>
+      <span class="kicker micro">01 · Flagship AI product · 2026</span>
+      <h3>EvalForge</h3>
+      <p class="desc">Built an AI release check that compares a candidate model with a trusted baseline and makes regressions easy to inspect. It combines a <b>25-check repeatable audit</b> with a live OpenAI comparison, then turns quality, safety, speed, and token evidence into a clear <b>Ready or Hold</b> decision.</p>
       <div class="tags">
-        <span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span><span class="tag">SQLite</span><span class="tag">pytest</span>
+        <span class="tag">TypeScript</span><span class="tag">OpenAI API</span><span class="tag">AI Evaluation</span><span class="tag">Cloudflare D1</span><span class="tag">Product Design</span>
       </div>
       <div class="proj-metrics" style="margin-bottom:1.6rem">
-        <div class="metric"><span class="num">3</span><span class="lbl">model families benchmarked</span></div>
-        <div class="metric"><span class="num">5</span><span class="lbl">threshold settings compared</span></div>
-        <div class="metric"><span class="num">32</span><span class="lbl">pytest tests across the stack</span></div>
-        <div class="metric"><span class="num">3</span><span class="lbl">API endpoints for scoring</span></div>
+        <div class="metric"><span class="num">25</span><span class="lbl">repeatable release checks</span></div>
+        <div class="metric"><span class="num">2</span><span class="lbl">real models compared side by side</span></div>
+        <div class="metric"><span class="num">4</span><span class="lbl">evidence dimensions reviewed</span></div>
+        <div class="metric"><span class="num">0</span><span class="lbl">API keys or live answers stored</span></div>
       </div>
-      <a class="link" href="https://github.com/SXT2918/fraudops-risk-monitoring" target="_blank" rel="noopener">View on GitHub</a>
+      <div class="proj-links"><a class="link" href="https://github.com/SXT2918/evalforge" target="_blank" rel="noopener">View on GitHub</a></div>
     </div>
+    <div>
+      <div class="proj-shot">
+        <img src="project-images/evalforge-live-comparison.png" alt="EvalForge live AI model comparison workspace" loading="lazy" onerror="this.parentElement.classList.add('hidden')">
+      </div>
+    </div>
+  </div>
+
+  <div class="proj proj-flip reveal">
+    <div>
+      <div class="proj-shot">
+        <img src="project-images/contextguard-dashboard.png" alt="ContextGuard local-first AI context security dashboard" loading="lazy" onerror="this.parentElement.classList.add('hidden')">
+      </div>
+    </div>
+    <div>
+      <span class="kicker micro">02 · AI security · 2026</span>
+      <h3>ContextGuard</h3>
+      <p class="desc">Designed a model-independent <b>context firewall</b> that reviews information before it reaches an AI. It finds hidden instructions, exposed secrets, personal information, conflicting or stale sources, and claims that are more certain than their evidence, then produces a safer context bundle.</p>
+      <div class="tags">
+        <span class="tag">TypeScript</span><span class="tag">AI Security</span><span class="tag">Prompt Injection</span><span class="tag">Privacy</span><span class="tag">Local-first</span>
+      </div>
+      <div class="proj-metrics" style="margin-bottom:1.6rem">
+        <div class="metric"><span class="num">6</span><span class="lbl">risk categories reviewed</span></div>
+        <div class="metric"><span class="num">Local</span><span class="lbl">analysis stays in the browser</span></div>
+        <div class="metric"><span class="num">1</span><span class="lbl">clean handoff bundle produced</span></div>
+        <div class="metric"><span class="num">0</span><span class="lbl">accounts or API keys required</span></div>
+      </div>
+      <div class="proj-links"><a class="link" href="https://github.com/SXT2918/contextguard" target="_blank" rel="noopener">View on GitHub</a></div>
+    </div>
+  </div>
+
+  <div class="proj reveal">
+    <div>
+      <span class="kicker micro">03 · Public-interest AI · 2026</span>
+      <h3>AccessLens AI</h3>
+      <p class="desc">Built a structured access review for public-facing information. Instead of another chatbot, AccessLens checks the same message through <b>five human access perspectives</b>, explains who each barrier may affect, and gives teams a clear, practical fix before publication.</p>
+      <div class="tags">
+        <span class="tag">TypeScript</span><span class="tag">Accessibility</span><span class="tag">Inclusive Design</span><span class="tag">Plain Language</span><span class="tag">Local-first</span>
+      </div>
+      <div class="proj-metrics" style="margin-bottom:1.6rem">
+        <div class="metric"><span class="num">5</span><span class="lbl">access perspectives in one review</span></div>
+        <div class="metric"><span class="num">1:1</span><span class="lbl">specific fix for every finding</span></div>
+        <div class="metric"><span class="num">Local</span><span class="lbl">content remains in the browser</span></div>
+        <div class="metric"><span class="num">3</span><span class="lbl">realistic review examples included</span></div>
+      </div>
+      <div class="proj-links"><a class="link" href="https://github.com/SXT2918/accesslens-ai" target="_blank" rel="noopener">View on GitHub</a></div>
+    </div>
+    <div>
+      <div class="proj-shot">
+        <img src="project-images/accesslens-dashboard.png" alt="AccessLens AI public-information access review dashboard" loading="lazy" onerror="this.parentElement.classList.add('hidden')">
+      </div>
+    </div>
+  </div>
+
+  <div class="proj proj-flip reveal">
     <div>
       <div class="proj-shot switcher">
         <img id="fraudopsShot" src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/streamlit-risk-monitoring.png?v=3" alt="FraudOps scored transaction review queue" loading="lazy" onerror="this.closest('.proj-shot').classList.add('hidden')">
@@ -352,59 +407,46 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
         <button class="shot-tab" data-src="https://raw.githubusercontent.com/SXT2918/fraudops-risk-monitoring/main/assets/screenshots/swagger-docs.png?v=3" data-alt="FraudOps FastAPI Swagger documentation with scoring endpoints">API Docs</button>
       </div>
     </div>
-  </div>
-
-  <div class="proj proj-flip reveal">
     <div>
-      <div class="proj-shot">
-        <img src="https://public.tableau.com/static/images/Fr/FraudDetection_17795989948530/Dashboard1/1.png" alt="Fraud detection Tableau dashboard" loading="lazy" onerror="this.parentElement.classList.add('hidden')">
-      </div>
-    </div>
-    <div>
-      <h3>Credit Card Fraud Detection</h3>
-      <p class="desc">Analyzed <b>284,807 transactions</b> to surface actionable fraud signals: late-night spikes, sub-$1 test charges, and high-risk merchant patterns. Selected a cost-sensitive threshold reaching <b>95% precision</b>, then translated it all into a Tableau dashboard for stakeholders.</p>
+      <span class="kicker micro">04 · ML system · 2026</span>
+      <h3>FraudOps: Risk Monitoring Platform</h3>
+      <p class="desc">Engineered an end-to-end fraud review workflow: CSV ingestion, schema validation, model training, probability scoring, and <b>Low/Medium/High routing</b>, served through a FastAPI scoring service and a five-tab Streamlit dashboard. Converted model scores into business metrics such as review volume and threshold tradeoffs.</p>
       <div class="tags">
-        <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">XGBoost</span><span class="tag">Tableau</span>
+        <span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span><span class="tag">SQLite</span><span class="tag">pytest</span>
       </div>
       <div class="proj-metrics" style="margin-bottom:1.6rem">
-        <div class="metric"><span class="num">$9,532</span><span class="lbl">estimated prevented loss per period</span></div>
-        <div class="metric"><span class="num">78/98</span><span class="lbl">fraud cases caught, 4 false alarms</span></div>
-        <div class="metric"><span class="num">0.17%</span><span class="lbl">class imbalance handled</span></div>
-        <div class="metric"><span class="num">3</span><span class="lbl">models benchmarked on PR-AUC</span></div>
+        <div class="metric"><span class="num">3</span><span class="lbl">model families benchmarked</span></div>
+        <div class="metric"><span class="num">5</span><span class="lbl">threshold settings compared</span></div>
+        <div class="metric"><span class="num">32</span><span class="lbl">pytest tests across the stack</span></div>
+        <div class="metric"><span class="num">3</span><span class="lbl">API endpoints for scoring</span></div>
       </div>
-      <a class="link" href="https://github.com/SXT2918/Fraud-Detection" target="_blank" rel="noopener">View on GitHub</a>
+      <div class="proj-links"><a class="link" href="https://github.com/SXT2918/fraudops-risk-monitoring" target="_blank" rel="noopener">View on GitHub</a></div>
     </div>
   </div>
 
-  <div class="proj reveal">
-    <div>
+  <div class="proj-pair">
+    <article class="proj-sm reveal">
+      <span class="kicker micro">05 · Data platform</span>
+      <div class="proj-shot"><img src="financethat-1.png" alt="FinanceThat dashboard with portfolio KPIs and active holdings" loading="lazy" onerror="this.parentElement.classList.add('hidden')"></div>
       <h3>FinanceThat</h3>
-      <p class="desc">Built a portfolio data platform integrating <b>Interactive Brokers Flex</b> workflows into a normalized 10-table SQLite schema, with a Canadian ACB engine for realized and unrealized P&amp;L, dividends, and proceeds simulation. Cut manual reconciliation by <b>90%+</b>.</p>
-      <div class="tags">
-        <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">REST API</span><span class="tag">Streamlit</span>
-      </div>
-      <div class="proj-metrics" style="margin-bottom:1.6rem">
-        <div class="metric"><span class="num">3,600+</span><span class="lbl">lines of production Python</span></div>
-        <div class="metric"><span class="num">99</span><span class="lbl">pytest cases</span></div>
-        <div class="metric"><span class="num">10</span><span class="lbl">normalized SQLite tables</span></div>
-        <div class="metric"><span class="num">90%+</span><span class="lbl">manual reconciliation cut</span></div>
-      </div>
-      <a class="link" href="https://github.com/SXT2918/FinanceThat" target="_blank" rel="noopener">View on GitHub</a>
-    </div>
-    <div>
-      <div class="proj-shot">
-        <img src="financethat-1.png" alt="FinanceThat dashboard with portfolio KPIs and active holdings" loading="lazy" onerror="this.parentElement.classList.add('hidden')">
-      </div>
-      <div class="shot-tabs" role="tablist" aria-label="FinanceThat screenshots">
-        <button class="shot-tab active" data-src="financethat-1.png" data-alt="FinanceThat dashboard with portfolio KPIs and active holdings">Dashboard</button>
-        <button class="shot-tab" data-src="financethat-2.png" data-alt="FinanceThat interactive performance chart with period cards">Performance</button>
-        <button class="shot-tab" data-src="financethat-3.png" data-alt="FinanceThat manual trade ledger with ACB cost basis">Trade Ledger</button>
-      </div>
-    </div>
+      <p class="desc">Integrated Interactive Brokers Flex workflows into a normalized 10-table SQLite schema and built a Canadian ACB engine for realized and unrealized P&amp;L, dividends, and proceeds simulation.</p>
+      <div class="stats"><div class="stat"><span class="num">10</span><span class="lbl">database tables</span></div><div class="stat"><span class="num">5</span><span class="lbl">IBKR feeds</span></div></div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">ETL</span><span class="tag">Streamlit</span></div>
+      <div class="foot"><a class="link" href="https://github.com/SXT2918/FinanceThat" target="_blank" rel="noopener">View on GitHub</a></div>
+    </article>
+    <article class="proj-sm reveal">
+      <span class="kicker micro">06 · ML analysis</span>
+      <div class="proj-shot"><img src="https://public.tableau.com/static/images/Fr/FraudDetection_17795989948530/Dashboard1/1.png" alt="Fraud detection Tableau dashboard" loading="lazy" onerror="this.parentElement.classList.add('hidden')"></div>
+      <h3>Credit Card Fraud Detection</h3>
+      <p class="desc">Analyzed <b>284,807 anonymized transactions</b>, benchmarked three models under severe class imbalance, and translated threshold tradeoffs and limitations into a Tableau dashboard.</p>
+      <div class="stats"><div class="stat"><span class="num">95%</span><span class="lbl">sample precision</span></div><div class="stat"><span class="num">78/98</span><span class="lbl">fraud cases caught</span></div></div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">XGBoost</span><span class="tag">Tableau</span></div>
+      <div class="foot"><a class="link" href="https://github.com/SXT2918/Fraud-Detection" target="_blank" rel="noopener">View on GitHub</a></div>
+    </article>
   </div>
 
   <div class="proj-wide reveal">
-    <span class="num">3,500+</span>
+    <span class="num">07</span>
     <div>
       <h3>Wellspring Member Engagement</h3>
       <p class="desc">Audited and cleaned 3,500+ member records, removing <b>15%+ erroneous data</b>, then used bootstrap confidence intervals, classification trees, and regression to measure program changes and forecast attendance. Presented recommendations that improved leadership confidence in program planning.</p>
@@ -414,9 +456,17 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
 </section>
 
 <section id="experience">
-  <h2 class="sec-head reveal">Experience &amp; <i>leadership</i></h2>
-  <p class="sec-sub reveal">Work and elected roles, measured the same way I measure everything: by what changed.</p>
+  <h2 class="sec-head reveal">Research, experience &amp; <i>leadership</i></h2>
+  <p class="sec-sub reveal">Research and applied roles, grounded in the questions investigated, the work produced, and the people it supported.</p>
   <div class="xp">
+    <div class="xp-item reveal">
+      <div class="xp-when micro">Jul 2026 · Present<span class="org">Prof. Ahmed · University of Toronto</span></div>
+      <div class="xp-body">
+        <h3>AI Tokenomics Research</h3>
+        <p>Conducted a critical study of a 2026 AI tokenomics framework, connecting resource allocation and network economics with evidence on agentic AI costs. Evaluated assumptions around measurement, risk, and multilingual fairness, then produced a <b>citation-grounded academic briefing</b> with speaker notes and a research appendix.</p>
+      </div>
+      <div class="xp-num"><span class="num">11</span><span class="lbl">slide research briefing</span></div>
+    </div>
     <div class="xp-item reveal">
       <div class="xp-when micro">Sep 2024 · Present<span class="org">Literary Ripple Inc.</span></div>
       <div class="xp-body">
@@ -446,25 +496,27 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
 
 <section id="skills">
   <h2 class="sec-head reveal">Skills, <i>in practice</i></h2>
-  <p class="sec-sub reveal">Every bar is backed by a project or a course, not a self-rating.</p>
+  <p class="sec-sub reveal">Each skill is tied to project or coursework evidence rather than a numerical self-rating.</p>
   <div class="skills-wrap reveal">
     <div class="skill-col">
       <h3 class="micro">Languages</h3>
-      <div class="skill"><div class="row"><span>Python</span><em>daily driver</em></div><div class="bar"><i data-w=".92"></i></div></div>
-      <div class="skill"><div class="row"><span>SQL</span><em>fluent</em></div><div class="bar"><i data-w=".85"></i></div></div>
+      <div class="skill"><div class="row"><span>Python</span><em>FraudOps + FinanceThat</em></div><div class="bar"><i data-w=".92"></i></div></div>
+      <div class="skill"><div class="row"><span>TypeScript</span><em>EvalForge + AI products</em></div><div class="bar"><i data-w=".82"></i></div></div>
+      <div class="skill"><div class="row"><span>SQL</span><em>fraud analytics layers</em></div><div class="bar"><i data-w=".85"></i></div></div>
       <div class="skill"><div class="row"><span>R</span><em>coursework + projects</em></div><div class="bar"><i data-w=".72"></i></div></div>
     </div>
     <div class="skill-col">
       <h3 class="micro">ML &amp; Analytics</h3>
-      <div class="skill"><div class="row"><span>scikit-learn / XGBoost</span><em>4 projects</em></div><div class="bar"><i data-w=".88"></i></div></div>
-      <div class="skill"><div class="row"><span>EDA &amp; statistics</span><em>core strength</em></div><div class="bar"><i data-w=".9"></i></div></div>
+      <div class="skill"><div class="row"><span>scikit-learn / XGBoost</span><em>FraudOps + fraud detection</em></div><div class="bar"><i data-w=".88"></i></div></div>
+      <div class="skill"><div class="row"><span>AI evaluation &amp; safety</span><em>3 product builds</em></div><div class="bar"><i data-w=".84"></i></div></div>
+      <div class="skill"><div class="row"><span>EDA &amp; statistics</span><em>coursework + case studies</em></div><div class="bar"><i data-w=".9"></i></div></div>
       <div class="skill"><div class="row"><span>Thresholds &amp; imbalance</span><em>fraud work</em></div><div class="bar"><i data-w=".82"></i></div></div>
     </div>
     <div class="skill-col">
       <h3 class="micro">Data Eng &amp; BI</h3>
       <div class="skill"><div class="row"><span>FastAPI / ETL / SQLite</span><em>2 platforms</em></div><div class="bar"><i data-w=".8"></i></div></div>
       <div class="skill"><div class="row"><span>Tableau / Power BI</span><em>dashboards</em></div><div class="bar"><i data-w=".78"></i></div></div>
-      <div class="skill"><div class="row"><span>pytest / Git</span><em>125 tests written</em></div><div class="bar"><i data-w=".76"></i></div></div>
+      <div class="skill"><div class="row"><span>pytest / Git</span><em>CI-backed project suites</em></div><div class="bar"><i data-w=".76"></i></div></div>
     </div>
   </div>
 </section>
@@ -505,13 +557,13 @@ footer p{font-size:.74rem;color:var(--text-3);letter-spacing:.06em}
 
 <section id="contact">
   <div class="contact-media">
-    <img src="contact.jpg" alt="" onerror="this.style.display='none'">
+    <img src="hero-poster.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
   </div>
   <div class="contact-scrim"></div>
   <div class="contact-inner">
     <p class="micro">End of day. Lamp still on.</p>
     <h2>Let's talk <i>data.</i></h2>
-    <p>Open to data analyst, data science, and ML internships and collaborations. Based in Toronto, happy to talk anywhere.</p>
+    <p>Open to AI product, data science, machine-learning, and research internships and collaborations. Based in Toronto, happy to talk anywhere.</p>
     <div class="contact-ctas">
       <a class="btn btn-primary magnetic" href="mailto:shixintian2389@gmail.com"><span>Email Me</span></a>
       <a class="btn btn-ghost magnetic" href="Xintian_Shi_Resume_DA_DS.pdf" download><span>Resume · Analytics</span></a>
@@ -556,7 +608,7 @@ else{
 }
 
 /* rotating role crossfade */
-const roles=['Data Analyst','Data Scientist','Machine Learning Engineer'];
+const roles=['AI Product Builder','Data Scientist','Machine Learning Engineer'];
 const roleEl=document.getElementById('role');
 if(!reduce){
   let ri=0;
